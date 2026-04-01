@@ -1,0 +1,17 @@
+# Claude / AI internal config
+.claude/
+claude.md
+skills.md
+codegen_rules.md
+
+# Planning & internal docs
+fast_api_plan.md
+requirements.md
+
+# Environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
