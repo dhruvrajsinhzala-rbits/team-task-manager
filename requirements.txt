@@ -1,0 +1,17 @@
+fastapi
+fastapi-cli
+uvicorn[standard]
+sqlmodel
+sqlalchemy
+greenlet
+alembic
+asyncpg
+pydantic-settings
+python-dotenv
+celery
+redis
+structlog
+pytest
+pytest-asyncio
+httpx
+slowapi
