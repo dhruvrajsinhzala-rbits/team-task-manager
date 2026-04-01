@@ -9,6 +9,7 @@ from sqlalchemy.ext.asyncio import async_engine_from_config
 
 from src.core.config import get_settings
 from src.db.base import target_metadata
+import src.models
 
 config = context.config
 
