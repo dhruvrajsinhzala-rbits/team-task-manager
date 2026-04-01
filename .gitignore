@@ -10,6 +10,7 @@ requirements.md
 
 # Environment
 .env
+src/.env
 
 # Python
 __pycache__/
