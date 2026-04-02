@@ -1,8 +1,6 @@
-from __future__ import annotations
-
 import uuid
 from datetime import datetime, timezone
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, List
 
 from sqlalchemy import DateTime
 from sqlmodel import Field, Relationship, SQLModel
@@ -29,6 +27,6 @@ class User(SQLModel, table=True):
     created_at: datetime = Field(default_factory=utc_now, sa_type=DateTime(timezone=True))
     updated_at: datetime = Field(default_factory=utc_now, sa_type=DateTime(timezone=True))
 
-    tasks_assigned: list["Task"] = Relationship(back_populates="assigned_to")
-    refresh_tokens: list["RefreshToken"] = Relationship(back_populates="user")
-    audit_logs: list["AuditLog"] = Relationship(back_populates="user")
+    tasks_assigned: List["Task"] = Relationship(back_populates="assigned_to")
+    refresh_tokens: List["RefreshToken"] = Relationship(back_populates="user")
+    audit_logs: List["AuditLog"] = Relationship(back_populates="user")
