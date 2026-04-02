@@ -1,8 +1,6 @@
-from __future__ import annotations
-
 import uuid
 from datetime import datetime
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, List, Optional
 
 from sqlalchemy import DateTime, Text
 from sqlmodel import Field, Relationship, SQLModel
@@ -29,5 +27,5 @@ class Task(SQLModel, table=True):
     created_at: datetime = Field(default_factory=utc_now, sa_type=DateTime(timezone=True))
     updated_at: datetime = Field(default_factory=utc_now, sa_type=DateTime(timezone=True))
 
-    assigned_to: "User" | None = Relationship(back_populates="tasks_assigned")
-    audit_logs: list["AuditLog"] = Relationship(back_populates="task")
+    assigned_to: Optional["User"] = Relationship(back_populates="tasks_assigned")
+    audit_logs: List["AuditLog"] = Relationship(back_populates="task")

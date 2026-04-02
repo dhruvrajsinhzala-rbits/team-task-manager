@@ -8,6 +8,9 @@ alembic
 asyncpg
 pydantic-settings
 python-dotenv
+PyJWT
+bcrypt
+email-validator
 celery
 redis
 structlog
