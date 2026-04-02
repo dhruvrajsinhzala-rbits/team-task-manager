@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import asyncio
-import logging
 import os
 from logging.config import fileConfig
 from pathlib import Path
@@ -17,7 +16,6 @@ from src.db.base import target_metadata
 import src.models
 
 config = context.config
-logger = logging.getLogger(__name__)
 
 _REPO_ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(_REPO_ROOT / ".env", override=False)
